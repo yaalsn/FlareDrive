@@ -9,23 +9,50 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Flare Drive</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .qr-image {
+        width: 256px;
+        height: 256px;
+        max-width: 100%;
+        height: auto;
+      }
+      @media (max-width: 600px) {
+        .container {
+          gap: 20px;
+        }
+        .qr-image {
+          width: 180px;
+          height: 180px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div style="display:flex;justify-content:center;gap:40px;">
-      <div style="display:flex;flex-direction:column;align-items:center;">
+    <div class="container">
+      <div class="item">
         <p style="vertical-align:middle"> 如果帮助了您，请作者喝杯咖啡吧 ☕️ </p>
-        </br>
-        <img src="%PUBLIC_URL%/IMG_6888.JPG" style="width:256px;height:256px;" />
+        <img src="%PUBLIC_URL%/IMG_6888.JPG" class="qr-image" />
       </div>
 
-      <div style="display:flex;flex-direction:column;align-items:center;">
+      <div class="item">
         <p style="vertical-align:middle"> 加入小红书群聊，成为焕新AM内测用户 </p>
-        </br>
-        <img src="%PUBLIC_URL%/WX20250225.png" style="width:256px;height:256px;" />
+        <img src="%PUBLIC_URL%/WX20250225.png" class="qr-image" />
       </div>
     </div>
-    </br>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
 </html>
+~
